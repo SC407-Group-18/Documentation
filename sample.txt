@@ -1,0 +1,111 @@
+\documentclass[lettersize,journal]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{cite}
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+% updated with editorial comments 8/9/2021
+
+\begin{document}
+
+\title{SC-407 and MC-226 Project}
+
+\author{Student1 Name (ID), Student2 Name (ID),\\ Student N Name (ID), Student $n+1$ Name (ID)}
+
+% The paper headers
+\markboth{SC-407 Project: Group $N$}%
+{Project Title}
+
+% \IEEEpubid{0000--0000/00\$00.00~\copyright~2021 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+\maketitle
+
+\begin{abstract}
+Provide an abstract of your project here. 
+\end{abstract}
+
+\begin{IEEEkeywords}
+Place several keywords of your project here (e.g., Smart Energy, Nuclear Fusion, Solar Energy, etc.)
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{C}{onservation} and preservation of the environment is a pressing objective of the current times. (In the opening paragraph, provide a general, gentle introduction to the subject) $\ldots$
+
+\subsection{Problem Statement}
+
+Provide a clear, crisp, specific, statement of the problem, and the motivation to solve the problem. 
+
+\subsection{Relevant Works}
+Provide a brief literature survey. Show how other researchers have solved a similar problem in the past. Discuss the State of the Art (SOTA) solutions in this problem domain. Show to the reader that you have explored the breadth of the problem domain. Use citations in this manner \cite{advanpix,kay1993fundamentals} or as \cite{Shu2018}.
+
+\subsection{Our Contributions}
+Provide a brief summary of your contributions. Explain why the problem you have solved is a hard problem. What novelty you have brought in. What light-bulb moments you had. Why your solution to the problem improves upon the existing SOTA.
+
+\subsection{Organization}
+Provide a brief overview of how you have organized the content of your paper in different sections
+
+
+\section{Proposed Approach}
+
+This is the section with the meat of your idea. Here, you describe what you have done. 
+
+It is good to have a general schematic and block diagrammatic representation of your idea. For example, you can include Fig.~\ref{fig_1}, which provides an overview of your proposed approach.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{Fig2.pdf}
+\caption{Simulation results of the proposed approach.}
+\label{fig_1}
+\end{figure}
+
+\subsection{An Analytical Derivation}
+
+\subsubsection{Corollaries}
+
+Organize the content of this section in different subsections, or even subsubsections, to make an impactful and well-organized presentation.
+
+\section{Algorithms}
+Algorithms should be numbered and include a short title. They are set off from the text with rules above and below the title and after the last line.
+
+\begin{algorithm}[H]
+\caption{Weighted Tanimoto ELM.}\label{alg:alg1}
+\begin{algorithmic}
+\STATE 
+\STATE {\textsc{TRAIN}}$(\mathbf{X} \mathbf{T})$
+\STATE \hspace{0.5cm}$ \textbf{select randomly } W \subset \mathbf{X}  $
+\STATE \hspace{0.5cm}$ N_\mathbf{t} \gets | \{ i : \mathbf{t}_i = \mathbf{t} \} | $ \textbf{ for } $ \mathbf{t}= -1,+1 $
+\STATE \hspace{0.5cm}$ B_i \gets \sqrt{ \textsc{max}(N_{-1},N_{+1}) / N_{\mathbf{t}_i} } $ \textbf{ for } $ i = 1,...,N $
+\STATE \hspace{0.5cm}$ \hat{\mathbf{H}} \gets  B \cdot (\mathbf{X}^T\textbf{W})/( \mathbb{1}\mathbf{X} + \mathbb{1}\textbf{W} - \mathbf{X}^T\textbf{W} ) $
+\STATE \hspace{0.5cm}$ \beta \gets \left ( I/C + \hat{\mathbf{H}}^T\hat{\mathbf{H}} \right )^{-1}(\hat{\mathbf{H}}^T B\cdot \mathbf{T})  $
+\STATE \hspace{0.5cm}\textbf{return}  $\textbf{W},  \beta $
+\STATE 
+\STATE {\textsc{PREDICT}}$(\mathbf{X} )$
+\STATE \hspace{0.5cm}$ \mathbf{H} \gets  (\mathbf{X}^T\textbf{W} )/( \mathbb{1}\mathbf{X}  + \mathbb{1}\textbf{W}- \mathbf{X}^T\textbf{W}  ) $
+\STATE \hspace{0.5cm}\textbf{return}  $\textsc{sign}( \mathbf{H} \beta )$
+\end{algorithmic}
+\label{alg1}
+\end{algorithm}
+
+\section{Discussion and Remarks}
+
+Provide conceptual insights here. You can discuss alternative approaches that you may have investigated. You can make remarks on any relevant understandings and studies you did. Through this section, you show the reader that you have gone to a great depth in solving the problem.
+
+\section{Numerical Results}
+
+Fig.~\ref{fig_2} provides an experimental evaluation of our proposed methodology.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{Fig7.pdf}
+\caption{Simulation results of the proposed approach.}
+\label{fig_2}
+\end{figure}
