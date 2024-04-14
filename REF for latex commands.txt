@@ -1,0 +1,161 @@
+\section{A brief \LaTeX tutorial}
+
+\subsection{Lists}
+In this section, we will consider three types of lists: simple unnumbered, numbered, and bulleted. There have been many options added to IEEEtran to enhance the creation of lists. If your lists are more complex than those shown below, please refer to the original ``IEEEtran\_HOWTO.pdf'' for additional options.\\
+
+\subsubsection*{\bf A plain  unnumbered list}
+\begin{list}{}{}
+\item{bare\_jrnl.tex}
+\item{bare\_conf.tex}
+\item{bare\_jrnl\_compsoc.tex}
+\item{bare\_conf\_compsoc.tex}
+\item{bare\_jrnl\_comsoc.tex}
+\end{list}
+
+\subsubsection*{\bf A simple numbered list}
+\begin{enumerate}
+\item{bare\_jrnl.tex}
+\item{bare\_conf.tex}
+\item{bare\_jrnl\_compsoc.tex}
+\item{bare\_conf\_compsoc.tex}
+\item{bare\_jrnl\_comsoc.tex}
+\end{enumerate}
+
+\subsubsection*{\bf A simple bulleted list}
+\begin{itemize}
+\item{bare\_jrnl.tex}
+\item{bare\_conf.tex}
+\item{bare\_jrnl\_compsoc.tex}
+\item{bare\_conf\_compsoc.tex}
+\item{bare\_jrnl\_comsoc.tex}
+\end{itemize}
+
+\subsection{Display Equations}
+The simple display equation example shown below uses the ``equation'' environment. To number the equations, use the $\backslash${\tt{label}} macro to create an identifier for the equation. LaTeX will automatically number the equation for you.
+\begin{equation}
+\label{deqn_ex1}
+x = \sum_{i=0}^{n} 2{i} Q.
+\end{equation}
+
+To reference this equation in the text, this can be used: (\ref{deqn_ex1})\\
+
+\subsection{Multi-Line Equations and Alignment}
+
+\noindent {\bf{A single equation with multiple lines aligned at the = signs}}
+\begin{align}
+a &= c+d \\
+b &= e+f
+\end{align}
+
+The {\tt{align}} environment can align on multiple  points as shown in the following example:
+\begin{align}
+x &= y & X & =Y & a &=bc\\
+x' &= y' & X' &=Y' &a' &=bz
+\end{align}
+
+\subsection{Matrices}
+There are several useful matrix environments that can save you some keystrokes. See the example coding below and the output.
+
+\noindent {\bf{A simple matrix:}}
+\begin{equation}
+\begin{matrix}  0 &  1 \\ 
+1 &  0 \end{matrix}
+\end{equation}
+
+\noindent {\bf{A matrix with square brackets}}
+\begin{equation}
+\begin{bmatrix} 0 & -1 \\ 
+1 &  0 \end{bmatrix}
+\end{equation}
+
+\noindent {\bf{A matrix with curly braces}}
+\begin{equation}
+\begin{Bmatrix} 1 &  0 \\ 
+0 & -1 \end{Bmatrix}
+\end{equation}
+
+\noindent {\bf{A matrix with single verticals}}
+\begin{equation}
+\begin{vmatrix} a &  b \\ 
+c &  d \end{vmatrix}
+\end{equation}
+
+\noindent {\bf{A matrix with double verticals}}
+\begin{equation}
+\begin{Vmatrix} i &  0 \\ 
+0 & -i \end{Vmatrix}
+\end{equation}
+is coded as:
+\begin{verbatim}
+\begin{equation}
+\begin{Vmatrix} i &  0 \\ 
+0 & -i \end{Vmatrix}
+\end{equation}\end{verbatim}
+
+\subsection{Arrays}
+
+A simple array
+\begin{equation}
+\left(
+\begin{array}{cccc}
+a+b+c & uv & x-y & 27\\
+a+b & u+v & z & 134
+\end{array}\right)
+\end{equation}
+
+A slight variation on this to better align the numbers in the last column
+\begin{equation}
+\left(
+\begin{array}{cccr}
+a+b+c & uv & x-y & 27\\
+a+b & u+v & z & 134
+\end{array}\right)
+\end{equation}
+
+An array with vertical and horizontal rules
+\begin{equation}
+\left( \begin{array}{c|c|c|r}
+a+b+c & uv & x-y & 27\\ \hline
+a+b & u+v & z & 134
+\end{array}\right)
+\end{equation}
+is coded as:
+
+Using cases inside an equation.
+\begin{equation}
+{z_m(t)} = \begin{cases}
+1,&{\text{if}}\ {\beta }_m(t) \\ 
+{0,}&{\text{otherwise.}} 
+\end{cases}
+\end{equation}
+
+\begin{equation} 
+  d_{R}^{KM} = \underset {d_{l}^{KM}} {\text{arg min}} \{ d_{1}^{KM},\ldots,d_{6}^{KM}\}.
+\end{equation}
+
+\subsection{ Text Acronyms Inside Equations}
+This example shows where the acronym ``MSE" is coded using $\backslash${\tt{text\{\}}} to match how it appears in the text.
+
+\begin{equation*}
+ \text{MSE} = \frac {1}{n}\sum _{i=1}^{n}(Y_{i} - \hat {Y_{i}})^{2}
+\end{equation*}
+}
+
+\subsection{Adding URLs}
+
+You can add any URL as shown here: \url{http://tug.ctan.org/info/lshort/english/lshort.pdf} which provides an overview of working with \LaTeX.
+
+\subsection{Tables}
+An example of how to write a table is in Table~\ref{table: tab-1}: 
+\begin{table}[!t]
+\caption{An Example of a Table\label{tab:table1}}
+\label{table: tab-1}
+\centering
+\begin{tabular}{|c||c|}
+\hline
+One & Two\\
+\hline
+Three & Four\\
+\hline
+\end{tabular}
+\end{table}
