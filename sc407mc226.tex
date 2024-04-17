@@ -30,7 +30,7 @@
 \maketitle
 
 \begin{abstract}
-Plastic pollution in oceans has a very significant threat to our marine ecosystems, it's biodiversity, human health and countries golbal economy. As this seems a major concern to conserve and preserve our environment, we highlight the importance of marine life and address the efforts that should be made to reduce the plastic pollution in oceans. 
+Plastic pollution in the oceans poses a very significant threat to our marine ecosystems, biodiversity, human health, and countries economies. As this seems like a major concern to conserve and preserve our environment, we highlight the importance of marine life and address the efforts that should be made to reduce the plastic pollution in oceans.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -38,13 +38,15 @@ Plastic Pollution, Marine Debris, Deep Learning, Autonomous Underwater Vehicles 
 \end{IEEEkeywords}
 
 \section{Introduction}
-\IEEEPARstart{P}{lastic} pollution has become a global challenge to many sectors which include food safety, human health, marine life and many more. Despite many efforts applied in this field it still faces many problems such as high cost, inaccurate assessment of plastic waste, labor work to solve such issue, limitation to cover area which is limited to river or lake and does not cover large ocean bodies. Therefore, there is a need to have an innovative solutions to address such issue globally.$\ldots$
+\IEEEPARstart{P}{lastic} pollution has become a global challenge for many sectors, which include food safety, human health, marine life, and many more. Despite many efforts applied in this field, it still faces many problems, such as high cost, inaccurate assessment of plastic waste, labor work to solve such issues, and limitations to cover areas that are limited to rivers or lakes and do not cover large ocean bodies. Therefore, there is a need to have innovative solutions to address such issues globally.
+
+
 
 \subsection{Problem Statement}
-The major problem or the main cause includes the environmental harm to the water bodies in river, lake, sea and ocean, this is because currently more than 14 million tonnes of plastic is deposited in ocean every year causing the depletion of marine ecosystem. The current methods for monitoring marine plastic posses high maintenance, more building cost, also includes greater labor work. Moreover ocean is also polluted due to the rise of carbon dioxide in the environment, leading to acidification of the water. So this bring in a solution to develop a machine learning model with computer vision to detect the plastic precisely and other marine debris throughtout the entire water body.
+The major problem or the main cause includes the environmental harm to the water bodies in rivers, lakes, seas, and oceans. This is because currently more than 14 million metric tons of plastic are deposited in the ocean every year, causing the depletion of marine ecosystems. The current methods for monitoring marine plastic have high maintenance costs, higher building costs, and also require greater labor work. Moreover, the ocean is also polluted due to the rise of carbon dioxide in the environment, leading to the acidification of the water. So this brings in a solution to develop a machine learning model with computer vision to detect the plastic precisely and other marine debris throughout the entire water body.
 
 \subsection{Relevant Works}
-Many initiative are taken in this direction to protect our environment. The Government of France has recently implemented the anti-waste law to aim to curb single-use plastic which ends up in freshwater.\cite{France} It is noted that out of 14 million tons of plastic which end up in the ocean, 80\% of the marine debris are found on surface of the water or deep-sea sediments.\cite{IUCN} For this many studies have been conducted such as the remote sensing technique which can be used to conduct aerial surveys on the water bodies to detect floating plastic. \cite{Invest} Researches are made to analize underwater composition of plastic debris on seafloor, this showcase the accumulation of plastic underwater. Many algorithm and use of convolutional neural networks are used to quantify the issue. The SOTA for this is to deploy the autonomous underwater vehicles(AUVs) which are equipped with the sensors and imaging system to monitor the marine plastic debris, they are capable of scanning the large ocean beds. Many collaborative efforts are made by governments and NGOs to provide large datasets and databases to such technology which can detect the plastic in ocean. With the development of this ML model, the software aims to detect plastic in the ocean in order to collect those remains by the AUVs or by manual labor for small water bodies.
+Many initiatives are being taken in this direction to protect our environment. The Government of France has recently implemented the anti-waste law to aim to curb single-use plastic that ends up in freshwater. \cite{France} It is noted that out of 14 million tons of plastic that end up in the ocean, 80\% of the marine debris is found on the surface of the water or deep-sea sediments. \cite{IUCN} For this, many studies have been conducted, such as the remote sensing technique, which can be used to conduct aerial surveys on water bodies to detect floating plastic. \cite{Invest} Research is made to analyze the underwater composition of plastic debris on the seafloor; this showcases the accumulation of plastic underwater. Many algorithms and the use of convolutional neural networks are used to quantify the issue. The SOTA for this is to deploy the autonomous underwater vehicles (AUVs), which are equipped with sensors and imaging systems to monitor marine plastic debris. They are capable of scanning large ocean beds. Many collaborative efforts are made by governments and NGOs to provide large datasets and databases for such technology that can detect plastic in the ocean. With the development of this ML model, the software aims to detect plastic in the ocean in order to collect those remains by the AUVs or by manual labor for small water bodies.
 
 
 \subsection{Our Contributions}
@@ -94,10 +96,47 @@ Algorithms should be numbered and include a short title. They are set off from t
 % \end{algorithmic}
 % \label{alg1}
 % \end{algorithm}
-
+\newpage
 \section{Discussion and Remarks}
 
 Provide conceptual insights here. You can discuss alternative approaches that you may have investigated. You can make remarks on any relevant understandings and studies you did. Through this section, you show the reader that you have gone to a great depth in solving the problem.
+
+
+\section{Graphical Results}
+This Section shows the results of the YOLO model. It has shown the different results which varries with all kind of marine debris including living animal too.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{r1.png}
+\caption{Detection of Trash and rov.}
+\label{fig_1}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{r2.png}
+\caption{Detection of rov.}
+\label{fig_1}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{r3.png}
+\caption{Detection of Animal.}
+\label{fig_1}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{r4.png}
+\caption{Detection of Trash.}
+\label{fig_1}
+\end{figure}
+
+
+
+
+
 
 \section{Numerical Results}
 
@@ -115,8 +154,15 @@ Finally, we have suggested a novel strategy for reducing ocean plastic waste tha
 
 
 {\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
+\section{Key Terms}
+\begin{enumerate}
+    \item CNN Model: It is one kind of deep learning model that is frequently used for image identification, classification, and segmentation tasks, it stands for convolutional neural network (CNN). Because CNNs can learn complicated patterns straight from raw pixel data and record spatial hierarchies, they are very useful for interpreting visual data. \\
+    Training of a CNN involves feeding labeled training data into the network and adjusting its parameters such as filter weights and biases to minimize a loss function and optimize the model's performance. Once the model is trained, the CNN can be used to make predictions on new or unseen data by passing it through the network ,which in turn return us with the output probabilities of each class.\\
+    \item AUVs : Unmanned, self-propelled vehicles called autonomous underwater vehicles (AUVs) are made to function underwater without direct human control. These vehicles can move through the water on their own and carry out a variety of functions in underwater settings since they are outfitted with a variety of sensors, navigation systems, and propulsion motors. \\
+    The use of this vehicle is mostly related to oceanography, where AUVs are used to collect data from ocean currents, it can read temperature gradients, and observe marine biodiversity, which provide us with valuable insights into oceanographic ecosystems. It is also used in environmental Monitoring where AUVs are deployed to monitor and take reading of environmental parameters like water quality, pollution levels and many more.\\
+    \item Object Detection: Finding and detecting things inside an image or video frame is the problem of object detection in computer vision. In contrast to image classification, which assigns a single label to the whole picture, object detection techniques locate and identify many items of interest as well as the bounding boxes that belong to each one. \\
+    It invloves processes like Image preprocessing, feature extraction, object classification and post processing. This technology is generally used in autonomous vehicle, in our case the AUVs. It is widely used in medical sector, surveillance and security.
+\end{enumerate}
 
 \bibliographystyle{ieeetr}
 \bibliography{sc407bib}
